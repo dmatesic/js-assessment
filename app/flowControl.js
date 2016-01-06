@@ -11,5 +11,14 @@ exports.flowControlAnswers = {
     // otherwise the function should return the number, or false if no number
     // was provided or the value provided is not a number
 
+    // TODO: Is there a smarter way of doing this?
+    var retValue;
+
+    if (num % 3 === 0 && num % 5 === 0) retValue = 'fizzbuzz';
+    else if (num % 3 === 0) retValue = 'fizz';
+    else if (num % 5 === 0) retValue = 'buzz';
+    else retValue = parseInt(num,10);
+
+    return retValue;
   }
 };
